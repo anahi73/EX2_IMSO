@@ -1,0 +1,8 @@
+#creamos los usuarios
+ for ($i = 1; $i -le2 ; $i++) {
+        $departamento="examen"
+        $nombreUsuario = "Usu$examen$i"
+        $password = ConvertTo-SecureString "Password0" -AsPlainText -Force
+
+        New-ADUser -SamAccountName $nombreUsuario -Name $nombreUsuario -Enabled $true -PasswordNeverExpires $true -AccountPassword $password 
+    }
